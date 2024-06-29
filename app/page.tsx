@@ -23,7 +23,7 @@ export default function Home() {
           showPortfolio ? "translate-y-0" : "translate-y-full"
         } z-20`}
       >
-        <PortfolioContent />
+        <PortfolioContent showPortfolio={showPortfolio} />
       </div>
     </main>
   );
