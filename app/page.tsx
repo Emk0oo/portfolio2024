@@ -19,9 +19,9 @@ export default function Home() {
     <main className="relative h-screen w-full overflow-hidden bg-black text-white">
       <NameSurnameLanding showPortfolio={showPortfolio} />
       <div
-        className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ${
-          showPortfolio ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
-        }`}
+        className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${
+          showPortfolio ? "translate-y-0" : "translate-y-full"
+        } z-20`}
       >
         <PortfolioContent />
       </div>
