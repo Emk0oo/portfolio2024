@@ -8,8 +8,8 @@ export default function NameSurnameLanding({ showPortfolio }: { showPortfolio: b
       } z-10`}
     >
       <div className="text-center flex flex-col items-center justify-center">
-        <p className="text-8xl font-bold">EMIR</p>
-        <p className="text-8xl font-bold">JAVOR</p>
+        <p className="text-8xl font-thin">EMIR</p>
+        <p className="text-8xl font-thin">JAVOR</p>
       </div>
     </div>
   );

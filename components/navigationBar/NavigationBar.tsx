@@ -15,7 +15,7 @@ export default function NavigationBar() {
           <li><NavigationLinks href="/">Contact</NavigationLinks></li>
         </ul>
       </div>
-      <div id="langage" className="flex flex-col justify-around ml-1">
+      <div id="langage" className="flex flex-col justify-around ml-1 pb-3">
         <button className="text-2xl text-slate-400 uppercase hover:underline">FR</button>
         <button className="text-2xl text-white uppercase underline">EN</button>
       </div>
