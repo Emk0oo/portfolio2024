@@ -18,10 +18,10 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative h-screen w-full overflow-hidden  text-white">
+    <main className="relative h-screen w-full overflow-hidden text-white">
       <NameSurnameLanding showPortfolio={showPortfolio} />
       <div
-        className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${
+        className={`absolute top-0 w-full transition-transform duration-1000 ${
           showPortfolio ? "translate-y-0" : "translate-y-full"
         } z-20`}
       >

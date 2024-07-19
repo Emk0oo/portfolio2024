@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NavigationBar from "./navigationBar/NavigationBar";
 import Hero from "./hero/Hero";
+import Timeline from "./timeline/Timeline";
 
 export default function PortfolioContent({ showPortfolio }: { showPortfolio: boolean }) {
   const [showLeftText, setShowLeftText] = useState(false);
@@ -31,9 +32,10 @@ export default function PortfolioContent({ showPortfolio }: { showPortfolio: boo
     <>
       {/* <NavigationBar /> */}
 
-      <div id="content" className="w-full h-full flex flex-col mt-[20%] px-[4%]">
+      <div id="content" className="w-full flex flex-col mt-8 px-4">
         <Hero showLeftText={showLeftText} showRightText={showRightText} showButton={showButton} />
-        
+        <hr className="border-gray-800 my-8" />
+        <Timeline />
       </div>
     </>
   );
