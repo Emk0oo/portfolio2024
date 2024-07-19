@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function NameSurnameLanding({ showPortfolio }: { showPortfolio: boolean }) {
   const [animateText, setAnimateText] = useState(false);
@@ -21,7 +21,11 @@ export default function NameSurnameLanding({ showPortfolio }: { showPortfolio: b
         showPortfolio ? "opacity-0" : "opacity-100"
       } z-10`}
     >
-      <div className={`text-center flex flex-col items-center justify-center transition-transform duration-500 ${animateText ? 'scale-50' : 'scale-100'}`}>
+      <div
+        className={`text-center flex flex-col items-center justify-center transition-transform duration-500 ${
+          animateText ? "scale-50" : "scale-100"
+        }`}
+      >
         <p className="text-8xl font-thin">EMIR</p>
         <p className="text-8xl font-thin">JAVOR</p>
       </div>
