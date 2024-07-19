@@ -1,11 +1,35 @@
+/* app/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-breathing {
+  animation: breathing 2s forwards;
+}
+
 body {
-    @apply text-white bg-black;
-  }
-  
-  .main-content {
-    @apply transition-transform duration-700;
-  }
+  @apply bg-black; /* Utilisez les classes Tailwind pour définir le fond noir */
+  background-image: radial-gradient(rgb(26, 26, 26) 1px, transparent 0); /* Configurez les points blancs */
+  background-size: 40px 40px; /* Définissez la taille de la grille */
+  background-position: 0 0; /* Ajustez la position si nécessaire */
+  font-family: var(--font-poppins);
+
+}
+
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+}
+

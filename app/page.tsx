@@ -1,3 +1,5 @@
+// app/page.tsx
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -10,13 +12,13 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPortfolio(true);
-    }, 3000);
+    }, 3000); // Trigger after 3 seconds
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <main className="relative h-screen w-full overflow-hidden bg-black text-white">
+    <main className="relative h-screen w-full overflow-hidden  text-white">
       <NameSurnameLanding showPortfolio={showPortfolio} />
       <div
         className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${
