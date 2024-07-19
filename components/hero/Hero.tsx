@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import HeroPills from "./HeroPills";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero({
   showLeftText,
@@ -14,9 +14,26 @@ export default function Hero({
   showRightText: boolean;
   showButton: boolean;
 }) {
+  const pillsData = [
+    { LinkName: "Github", link: "https://github.com/Emk0oo", Icon: FaGithub },
+    {
+      LinkName: "LinkedIn",
+      link: "https://www.linkedin.com/in/emirjavor/",
+      Icon: FaLinkedin,
+    },
+    {
+      LinkName: "Email",
+      link: "mailto:emir.javor1@gmail.com",
+      Icon: FaEnvelope,
+    },
+  ];
+
   return (
-    <div id="hero" className="w-full h-full flex-row">
-      <div id="hero-content" className="hidden md:w-full  md:flex md:mt-[10%] md:justify-between">
+    <div id="hero" className="w-full h-full flex">
+      <div
+        id="hero-content"
+        className="hidden md:w-full md:flex md:mt-[10%] md:justify-between"
+      >
         <div
           id="leftText"
           className="flex rotate-180 text-end transition-transform duration-1000 translate-y-0"
@@ -27,59 +44,35 @@ export default function Hero({
       </div>
       <div
         id="hero-content"
-        className="w-full h-full flex mt-[10%] justify-between"
+        className="w-full h-full flex-col mt-[10%] space-y-6"
       >
+
         <div
           id="rightText"
-          className="flex flex-col  transition-transform duration-1000 translate-y-0 opacity-100 origin-bottom"
+          className="flex flex-col transition-transform duration-1000 translate-y-0 opacity-100 origin-bottom space-y-4"
         >
-          <p className="text-4xl font-semibold ">
-            {" "}
-            Hello ! I&apos;m Emir
-          </p>
+          <p className="text-4xl font-semibold">Hello! I&apos;m Emir</p>
           <p className="text-4xl font-semibold text-green-500">
-            {" "}
             Full-stack developer
           </p>
-          <div id="hero-pills" className="flex flex-row">
-            <HeroPills LinkName="Github" link="https://github.com/Emir-M" Icon={FaGithub} />
+          <div id="hero-pills" className="flex flex-row justify-between py-3">
+            {pillsData.map((pill, index) => (
+              <HeroPills
+                key={index}
+                LinkName={pill.LinkName}
+                link={pill.link}
+                Icon={pill.Icon}
+              />
+            ))}
           </div>
-          <p>I&apos;m a junior full-stack developer based
-            in France working for Renault Group</p>
+        </div>
+        <div id="description" className="flex mt-4">
+          <p>
+            I&apos;m a middle full-stack developer based in France working for
+            Renault Group. 
+          </p>
         </div>
       </div>
     </div>
   );
 }
-
-/*<div id="hero-content" className="w-full h-full flex mt-[10%] justify-between">
-        <div
-          id="leftText"
-          className={`flex rotate-180 text-end transition-transform duration-1000 ${
-            showLeftText ? "translate-y-0" : "translate-y-full"
-          }`}
-        >
-          <p className="text-8xl [writing-mode:vertical-lr]">Junior</p>
-          <p className="text-8xl [writing-mode:vertical-lr]">Developer</p>
-        </div>
-        <div
-          id="rightText"
-          className={`flex flex-col w-1/2 transition-transform duration-1000 ${
-            showRightText ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
-          } origin-bottom`}
-        >
-          <p className="text-5xl font-thin text-slate-300">Full-stack</p>
-          <p className="text-8xl font-thin">Developer</p>
-          <p className="text-3xl font-thin max-w-[50%]">
-            Hello! I&apos;m Emir, I&apos;m a junior full-stack developer based in France working for Renault Group
-          </p>
-          <Link
-            href="/"
-            className={`text-3xl font-thin max-w-[50%] bg-white text-black p-4 mt-5 w-fit transition-transform duration-1000 origin-left ${
-              showButton ? "scale-x-100" : "scale-x-0"
-            }`}
-          >
-            View Portfolio
-          </Link>
-        </div>
-      </div>*/

@@ -13,10 +13,10 @@ const HeroPills: React.FC<HeroPillsProps> = ({ LinkName, link, Icon }) => {
     <>
       <div className="flex bg-gray-900 rounded-full px-4 py-2">
         <Link href={link}>
-            <div className="flex items-center gap-2">
-                <Icon />
-                <p>{LinkName}</p>
-            </div>
+          <div className="flex items-center gap-2">
+            <Icon style={{ color: 'green' }} /> {/* Apply green color to the icon */}
+            <p>{LinkName}</p>
+          </div>
         </Link>
       </div>
     </>

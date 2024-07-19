@@ -33,6 +33,7 @@ export default function PortfolioContent({ showPortfolio }: { showPortfolio: boo
 
       <div id="content" className="w-full h-full flex flex-col mt-[20%] px-[4%]">
         <Hero showLeftText={showLeftText} showRightText={showRightText} showButton={showButton} />
+        
       </div>
     </>
   );
