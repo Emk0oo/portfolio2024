@@ -12,7 +12,7 @@ type HeroProps = {
   showButton: boolean;
 };
 
-export default function Hero({ showLeftText, showRightText, showButton }: HeroProps) {
+export default function Hero({ showLeftText, showRightText }: HeroProps) {
   const pillsData = [
     { LinkName: "Github", link: "https://github.com/Emk0oo", Icon: FaGithub },
     {
@@ -27,7 +27,7 @@ export default function Hero({ showLeftText, showRightText, showButton }: HeroPr
     },
   ];
 
-  const words = ["FrontEnd developper", "BackEnd Developper", "FullStack developper"];
+  const words = ["FrontEnd developer", "BackEnd Developer", "FullStack developer"];
   const speed = 80;
   const skipDelay = 5;
   const word = useWordFlick(words, speed, skipDelay);
@@ -52,38 +52,29 @@ export default function Hero({ showLeftText, showRightText, showButton }: HeroPr
         id="hero-content"
         className="w-full h-full flex-col mt-[10%] space-y-6"
       >
-        {showRightText && (
-          <div
-            id="rightText"
-            className="flex flex-col transition-transform duration-1000 translate-y-0 opacity-100 origin-bottom space-y-4"
-          >
-            <p className="text-4xl font-semibold">Hello! I&apos;m Emir</p>
-            <p className="text-4xl font-semibold text-green-500">{word}</p>
-            <div id="hero-pills" className="flex flex-row space-x-4">
-              {pillsData.map((pill, index) => (
-                <HeroPills
-                  key={index}
-                  LinkName={pill.LinkName}
-                  link={pill.link}
-                  Icon={pill.Icon}
-                />
-              ))}
-            </div>
+        <div
+          id="rightText"
+          className={`flex flex-col transition-opacity duration-1000 opacity-100 space-y-4`}
+        >
+          <p className="text-4xl font-semibold">Hello! I&apos;m Emir</p>
+          <p className="text-4xl font-semibold text-green-500">{word}</p>
+          <div id="hero-pills" className="flex flex-row space-x-4">
+            {pillsData.map((pill, index) => (
+              <HeroPills
+                key={index}
+                LinkName={pill.LinkName}
+                link={pill.link}
+                Icon={pill.Icon}
+              />
+            ))}
           </div>
-        )}
+        </div>
         <div id="description" className="flex mt-4">
           <p>
             I&apos;m a middle full-stack developer based in France working for
             Renault Group.
           </p>
         </div>
-        {showButton && (
-          <div className="mt-6">
-            <button className="px-4 py-2 bg-blue-500 text-white rounded">
-              Contact Me
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );
