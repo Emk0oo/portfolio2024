@@ -27,7 +27,7 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
     },
   ];
 
-  const words = ["FrontEnd developer", "BackEnd Developer", "FullStack developer"];
+  const words = ["FrontEnd Developer", "BackEnd Developer", "FullStack Developer"];
   const speed = 80;
   const skipDelay = 5;
   const word = useWordFlick(words, speed, skipDelay);
@@ -57,7 +57,10 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
           className={`flex flex-col transition-opacity duration-1000 opacity-100 space-y-4`}
         >
           <p className="text-4xl font-semibold">Hello! I&apos;m Emir</p>
-          <p className="text-4xl font-semibold text-green-500">{word}</p>
+          <p className="text-4xl font-semibold text-green-500">
+            {word}
+            <span className="cursor"></span>
+          </p>
           <div id="hero-pills" className="flex flex-row space-x-4">
             {pillsData.map((pill, index) => (
               <HeroPills
