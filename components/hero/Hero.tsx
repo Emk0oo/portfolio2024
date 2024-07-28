@@ -34,7 +34,7 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
 
   return (
     <div id="hero" className="w-full h-full flex">
-      <div
+      {/* <div
         id="hero-content"
         className="hidden md:w-full md:flex md:mt-[10%] md:justify-between"
       >
@@ -47,14 +47,14 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
             <p className="text-8xl [writing-mode:vertical-lr]">Developer</p>
           </div>
         )}
-      </div>
+      </div> */}
       <div
         id="hero-content"
-        className="w-full h-full flex-col mt-[10%] space-y-6"
+        className="w-full h-full flex-col  md:flex md:items-center mt-[10%] space-y-6"
       >
         <div
           id="rightText"
-          className={`flex flex-col transition-opacity duration-1000 opacity-100 space-y-4`}
+          className={`flex flex-col transition-opacity  duration-1000 opacity-100 space-y-4`}
         >
           <p className="text-4xl font-semibold">Hello! I&apos;m Emir</p>
           <p className="text-4xl font-semibold text-green-500">
@@ -71,13 +71,14 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
               />
             ))}
           </div>
-        </div>
-        <div id="description" className="flex mt-4">
+          <div id="description" className="flex mt-4">
           <p>
             I&apos;m a middle full-stack developer based in France working for
             Renault Group.
           </p>
         </div>
+        </div>
+        
       </div>
     </div>
   );
