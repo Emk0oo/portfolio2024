@@ -11,11 +11,11 @@ interface HeroPillsProps {
 const HeroPills: React.FC<HeroPillsProps> = ({ LinkName, link, Icon }) => {
   return (
     <>
-      <div className="flex bg-gray-900 rounded-full px-4 py-2">
+      <div className="flex border-2 border-green-500 hover:border-green-700 hover:text-green-500 rounded-lg px-4 py-2">
         <Link href={link}>
           <div className="flex items-center gap-2">
             <Icon style={{ color: 'green' }} /> {/* Apply green color to the icon */}
-            <p>{LinkName}</p>
+            <p className="">{LinkName}</p>
           </div>
         </Link>
       </div>

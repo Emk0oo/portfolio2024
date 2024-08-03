@@ -5,6 +5,8 @@ import Link from "next/link";
 import HeroPills from "./HeroPills";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import useWordFlick from "@/hooks/useWordFlick"; // Import the custom hook
+import Image from "next/image";
+import avatar from "@/public/images/avatar.png";
 
 type HeroProps = {
   showLeftText: boolean;
@@ -27,34 +29,34 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
     },
   ];
 
-  const words = ["FrontEnd Developer", "BackEnd Developer", "FullStack Developer"];
+  const words = [
+    "FrontEnd Developer",
+    "BackEnd Developer",
+    "FullStack Developer",
+    "JavaScript Developer",
+  ];
   const speed = 80;
-  const skipDelay = 5;
+  const skipDelay = 8;
   const word = useWordFlick(words, speed, skipDelay);
 
   return (
     <div id="hero" className="w-full h-full flex">
-      {/* <div
-        id="hero-content"
-        className="hidden md:w-full md:flex md:mt-[10%] md:justify-between"
-      >
-        {showLeftText && (
-          <div
-            id="leftText"
-            className="flex rotate-180 text-end transition-transform duration-1000 translate-y-0"
-          >
-            <p className="text-8xl [writing-mode:vertical-lr]">Middle</p>
-            <p className="text-8xl [writing-mode:vertical-lr]">Developer</p>
-          </div>
-        )}
-      </div> */}
       <div
         id="hero-content"
-        className="w-full h-full flex-col  md:flex md:items-center mt-[10%] space-y-6"
+        className="w-full h-full flex flex-col md:flex-row-reverse md:items-center md:mx-[10%] mt-[5%] space-y-6 md:space-y-0"
       >
+        <div id="avatar" className="flex  md:w-1/2 md:justify-end">
+          <Image
+            src={avatar}
+            width={170}  // Taille de l'image pour mobile
+            height={170} // Taille de l'image pour mobile
+            className="md:w-[250px] md:h-[250px]" // Taille de l'image pour desktop
+            alt="avatar"
+          />
+        </div>
         <div
-          id="rightText"
-          className={`flex flex-col transition-opacity  duration-1000 opacity-100 space-y-4`}
+          id="leftText"
+          className={`flex flex-col transition-opacity w-full duration-1000 opacity-100 space-y-4 md:w-1/2`}
         >
           <p className="text-4xl font-semibold">Hello! I&apos;m Emir</p>
           <p className="text-4xl font-semibold text-green-500">
@@ -72,13 +74,12 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
             ))}
           </div>
           <div id="description" className="flex mt-4">
-          <p>
-            I&apos;m a middle full-stack developer based in France working for
-            Renault Group.
-          </p>
+            <p>
+              I&apos;m a middle full-stack developer based in France working for
+              Renault Group.
+            </p>
+          </div>
         </div>
-        </div>
-        
       </div>
     </div>
   );

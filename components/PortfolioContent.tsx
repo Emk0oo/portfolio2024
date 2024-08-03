@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import NavigationBar from "./navigationBar/NavigationBar";
 import Hero from "./hero/Hero";
 import Timeline from "./timeline/Timeline";
+import Navbar from "./Navbar";
 
 interface PortfolioContentProps {
   showPortfolio: boolean;
@@ -41,14 +42,14 @@ const PortfolioContent = ({ showPortfolio }: PortfolioContentProps) => {
       }`}
     >
       {/* <NavigationBar /> */}
+      <Navbar />
       <div id="content" className="w-full flex flex-col mt-8 px-4">
         <Hero
           showLeftText={showLeftText}
           showRightText={showRightText}
           showButton={showButton}
         />
-        <hr className="border-gray-800 my-8" />
-        <Timeline />
+        {/* <Timeline /> */}
       </div>
     </div>
   );
