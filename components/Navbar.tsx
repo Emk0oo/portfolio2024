@@ -22,7 +22,7 @@ const Navbar = () => {
                 Timeline
                 </a>
                 <a className="hover:text-gray-300  bg-black border-2 border-gray-800 hover:bg-gray-900 py-2 px-4 rounded-full" href="#services">
-                Technology
+                Tech Stack
                 </a>
                 <a className="text-black hover:text-gray-900  bg-white hover:bg-slate-200 py-2 px-4 rounded-full" href="#contact">
                 Contact me
