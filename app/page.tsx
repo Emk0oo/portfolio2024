@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative h-screen w-full overflow-hidden text-white">
+    <main className="relative h-screen w-full  text-white">
       <NameSurnameLanding showPortfolio={showPortfolio} />
       <div
         className={`absolute top-0 w-full transition-transform duration-1000 ${

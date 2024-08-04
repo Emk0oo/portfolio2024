@@ -17,7 +17,7 @@ export default function NameSurnameLanding({ showPortfolio }: { showPortfolio: b
 
   return (
     <div
-      className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${
+      className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000  ${
         showPortfolio ? "opacity-0" : "opacity-100"
       } z-10`}
     >

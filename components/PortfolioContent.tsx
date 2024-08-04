@@ -44,7 +44,7 @@ const PortfolioContent = ({ showPortfolio }: PortfolioContentProps) => {
     >
       {/* <NavigationBar /> */}
       <Navbar />
-      <div id="content" className="w-full flex flex-col mt-8 px-4">
+      <div id="content" className="w-full flex flex-col mt-8 px-4 ">
         <Hero
           showLeftText={showLeftText}
           showRightText={showRightText}
