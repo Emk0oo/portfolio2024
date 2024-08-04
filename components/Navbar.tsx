@@ -1,31 +1,37 @@
-import React from 'react'
+import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="text-white shadow">
-        <div className="container mx-auto px-6 py-3">
-            <div className="flex items-center justify-between">
-            <div className="hidden w-full  md:flex md:items-center">
-                <a className="text-sm md:ml-6" href="#hero">
-                Home
+    <header className="text-white mx-[10%] mt-2 shadow">
+      <div className="container  py-3">
+        <div className="flex items-center justify-between">
+            <div>
+                <a
+                className="font-bold text-2xl lg:text-4xl"
+                href="#"
+                >
+                EMIR 
                 </a>
-                <a className="text-sm md:ml-6" href="#about">
+            </div>
+    
+            <nav className="space-x-4 text-lg ">
+                <a className="hover:text-gray-300" href="#about">
                 About
                 </a>
-                <a className="text-sm md:ml-6" href="#services">
-                Services
+                <a className="hover:text-gray-300" href="#portfolio">
+                Timeline
                 </a>
-                <a className="text-sm md:ml-6" href="#portfolio">
-                Portfolio
+                <a className="hover:text-gray-300" href="#services">
+                Technology
                 </a>
-                <a className="text-sm md:ml-6" href="#contact">
-                Contact
+                <a className="text-black hover:text-gray-900  bg-white hover:bg-slate-200 py-2 px-4 rounded-full " href="#contact">
+                Contact me
                 </a>
-            </div>
-            </div>
+            </nav>
         </div>
+      </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

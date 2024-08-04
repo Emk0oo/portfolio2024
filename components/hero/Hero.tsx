@@ -40,17 +40,17 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
   const word = useWordFlick(words, speed, skipDelay);
 
   return (
-    <div id="hero" className="w-full h-full flex">
+    <div id="hero" className="w-full h-full flex  ">
       <div
         id="hero-content"
-        className="w-full h-full flex flex-col md:flex-row-reverse md:items-center md:mx-[10%] mt-[5%] space-y-6 md:space-y-0"
+        className="w-full h-full flex flex-col md:flex-row-reverse md:items-center md:mx-[10%] mt-[5%]  space-y-6 md:space-y-0"
       >
         <div id="avatar" className="flex  md:w-1/2 md:justify-end">
           <Image
             src={avatar}
-            width={170}  // Taille de l'image pour mobile
+            width={170} // Taille de l'image pour mobile
             height={170} // Taille de l'image pour mobile
-            className="md:w-[250px] md:h-[250px]" // Taille de l'image pour desktop
+            className="md:w-[300px] md:h-[300px]" // Taille de l'image pour desktop
             alt="avatar"
           />
         </div>
