@@ -5,6 +5,7 @@ import NavigationBar from "./navigationBar/NavigationBar";
 import Hero from "./hero/Hero";
 import Timeline from "./timeline/Timeline";
 import Navbar from "./Navbar";
+import Technology from "./technology/Technology";
 
 interface PortfolioContentProps {
   showPortfolio: boolean;
@@ -49,6 +50,7 @@ const PortfolioContent = ({ showPortfolio }: PortfolioContentProps) => {
           showRightText={showRightText}
           showButton={showButton}
         />
+        <Technology />
         {/* <Timeline /> */}
       </div>
     </div>
