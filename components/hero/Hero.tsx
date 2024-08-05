@@ -749,7 +749,7 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
           <div id="description" className="flex mt-4">
             <p>
               I&apos;m a middle full-stack developer based in France working for
-              Renault Group.ù
+              Renault Group.
             </p>
           </div>
         </div>
