@@ -55,3 +55,18 @@ body {
 }
 
 
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); } /* Start and end at initial position */
+  20% { transform: rotate(-12deg); } /* Shake left slightly */
+  40% { transform: rotate(12deg); }  /* Shake right slightly */
+  60% { transform: rotate(-6deg); } /* Shake left slightly */
+  80% { transform: rotate(6deg); }  /* Shake right slightly */
+}
+
+#waving-hand {
+  animation: shake 2s infinite; /* Slowed down to 2 seconds per cycle */
+  animation-timing-function: ease-in-out; /* Smooth easing for natural motion */
+  transform-origin: center; /* Keep pivot point at center */
+  animation-delay: 3s; /* Delay between cycles */
+}
+
