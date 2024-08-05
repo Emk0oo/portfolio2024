@@ -6,7 +6,7 @@ const Timeline = () => {
       <hr className="border-gray-800 my-8 md:mx-[33.9%]" />
 
       <div id="timeline" className="w-full h-full flex flex-col md:mx-[33.9%]">
-        <h1 className="text-xl mb-8">My timeline</h1>
+        <h1 className="text-xl mb-8">Experience</h1>
         <div className="relative w-full h-full flex flex-col items-center">
           <div id="graph-timeline" className="relative w-full h-full">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-screen"></div>

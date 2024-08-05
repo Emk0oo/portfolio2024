@@ -5,7 +5,7 @@ const Technology = () => {
   return (
     <div id="technology" className="w-full py-8 ">
       <div className="container mx-auto">
-        <p className="text-xl text-white">TECH STACK</p>
+        <p className="text-xl text-white">SKILLS</p>
         <hr className="border-white my-4" />
         <p className="my-3">Backend</p>
         <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-2 max-w-full">
