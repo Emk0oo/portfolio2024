@@ -43,7 +43,7 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
     <div id="hero" className="w-full h-full flex  ">
       <div
         id="hero-content"
-        className="w-full h-full flex flex-col md:flex-row-reverse md:items-center md:mx-[10%] mt-[5%]  space-y-6 md:space-y-0"
+        className="w-full h-full flex flex-col md:flex-row-reverse md:items-center md:mx-[10%] mt-[2%]  space-y-6 md:space-y-0"
       >
         <div id="avatar" className="flex  md:w-1/2 md:justify-end">
           <Image

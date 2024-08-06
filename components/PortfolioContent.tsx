@@ -50,8 +50,8 @@ const PortfolioContent = ({ showPortfolio }: PortfolioContentProps) => {
           showRightText={showRightText}
           showButton={showButton}
         />
-        <Technology />
         {/* <Timeline /> */}
+        <Technology />
       </div>
     </div>
   );
