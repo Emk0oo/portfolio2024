@@ -9,7 +9,7 @@ interface TechnologyItemProps {
 const TechnologyItem: React.FC<TechnologyItemProps> = ({ name, color, svg }) => {
   return (
     <li 
-      className="flex items-center gap-3 rounded-md p-3 bg-secondary/5 bg-neutral-900 border border-slate-800 max-w-full "
+      className="flex items-center gap-3 rounded-md p-3 bg-secondary/5  bg-neutral-900  max-w-full "
     >
       <div 
         className={`p-2 items-center justify-center rounded-lg bg-opacity-15 transition-transform transform`} 

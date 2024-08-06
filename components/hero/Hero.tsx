@@ -750,6 +750,7 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
             <p>
               I&apos;m a middle full-stack developer based in France working for
               Renault Group.
+              I learn. I build. I ship.
             </p>
           </div>
         </div>

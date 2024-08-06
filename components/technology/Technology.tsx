@@ -3,7 +3,7 @@ import TechnologyItem from "./TechnologyItem";
 
 const Technology = () => {
   return (
-    <div id="technology" className="w-full py-8 ">
+    <div id="skills" className="w-full py-8 ">
       <div className="container mx-auto">
         <p className="text-xl text-white">SKILLS</p>
         <hr className="border-white my-4" />
@@ -98,7 +98,7 @@ const Technology = () => {
           />
           <TechnologyItem
             name="Angular"
-            color="#ffffff14"
+            color="#F2075514"
             svg={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ const Technology = () => {
           />
           <TechnologyItem
             name="Flutter"
-            color="#ffffff14"
+            color="#00B5F814"
             svg={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -201,7 +201,7 @@ const Technology = () => {
           />
           <TechnologyItem
             name="Tailwind CSS"
-            color="#ffffff14"
+            color="#15BFB814"
             svg={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
