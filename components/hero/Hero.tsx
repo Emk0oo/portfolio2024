@@ -35,7 +35,7 @@ export default function Hero({ showLeftText, showRightText }: HeroProps) {
     "FullStack Developer",
     "JavaScript Developer",
   ];
-  const speed = 80;
+  const speed = 90;
   const skipDelay = 8;
   const word = useWordFlick(words, speed, skipDelay);
 
