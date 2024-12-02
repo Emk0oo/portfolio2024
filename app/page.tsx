@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPortfolio(true);
-    }, 3000); // Trigger after 3 seconds
+    }, 1000); 
 
     return () => clearTimeout(timer);
   }, []);
