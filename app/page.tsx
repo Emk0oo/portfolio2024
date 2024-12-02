@@ -10,21 +10,29 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPortfolio(true);
-    }, 1000); 
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <main className="relative h-screen w-full  text-white">
-      <NameSurnameLanding showPortfolio={showPortfolio} />
-      <div
-        className={`absolute top-0 w-full transition-transform duration-1000 ${
-          showPortfolio ? "translate-y-0" : "translate-y-full"
-        } z-20`}
-      >
-        <PortfolioContent showPortfolio={showPortfolio} />
-      </div>
-    </main>
+    <>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="BRDl5hFoLAKm6FWGU89xT0Mtj8M-fiwSvE7jGzBVbfU"
+        />
+      </head>
+      <main className="relative h-screen w-full  text-white">
+        <NameSurnameLanding showPortfolio={showPortfolio} />
+        <div
+          className={`absolute top-0 w-full transition-transform duration-1000 ${
+            showPortfolio ? "translate-y-0" : "translate-y-full"
+          } z-20`}
+        >
+          <PortfolioContent showPortfolio={showPortfolio} />
+        </div>
+      </main>
+    </>
   );
 }
